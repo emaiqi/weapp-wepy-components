@@ -1,0 +1,28 @@
+<template lang="wxml">
+    <view class="page">
+       <inaver :protectInaver.sync="protectInaver" :background.sync="background"><text class="title" slot="main">滚动透明渐变</text></inaver>
+      <scroll-view class="scrollView" scroll-y bindscroll="scrolling">
+          <view class="content">
+              <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1530288834055&di=bd6e672a316b17d55658eb04f71e5f13&imgtype=0&src=http%3A%2F%2Fg.hiphotos.baidu.com%2Fimage%2Fpic%2Fitem%2F0823dd54564e92584fbb491f9082d158cdbf4eb0.jpg"></image>
+          通过监听 scroll-view 的滚动来达到似的导航渐变的效果
+          适用于, 自定义导航栏
+          顶部展示图片 或者 浅色内容时 滚动 
+          滚动时去改导航栏的颜色 提高用户体验
+          </view>
+
+      </scroll-view>
+    </view>
+</template>
+<script src="index.js">
+</script>
+<style lang="less" scoped>
+.page{
+    .scrollView{
+        height: 100vh;
+        width: 100vw;
+        .content{
+            height: 200vh;
+        }
+    }
+}
+</style>

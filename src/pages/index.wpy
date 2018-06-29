@@ -1,0 +1,29 @@
+<template lang="wxml">
+    <view class="page">
+       <inaver ><text class="title" slot="main">组件列表</text></inaver>
+        <view class="container">
+            <view hover-class="navigator-hover" @tap='goto(scrollnaver)' class="cell">
+                导航栏 滚动渐变
+            </view>            
+        </view>
+    </view>
+</template>
+
+<script src="index.js">
+</script>
+
+<style lang="less" scoped>
+@import '../style/theme.less';
+    .page{
+        .container{
+            padding: 50rpx 20rpx;
+            .cell{
+                color: @notice-color;
+                width: 650rpx;
+                line-height: 100rpx;
+                border-top: 1px solid #666666;
+                border-bottom: 1px solid #666666;
+            }
+        }
+    }
+</style>
